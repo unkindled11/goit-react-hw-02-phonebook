@@ -23,7 +23,7 @@ class MyNumbers extends  Component {
         const { contacts } = this.state;
         const dublicate = contacts.find(item => item.name === data.name);
         if (dublicate) {
-            alert(`${data.title} is already in number list`);
+            alert(`${data.name} is already in number list`);
             return;
         }
 
@@ -37,8 +37,6 @@ class MyNumbers extends  Component {
             };
             return {
                 contacts: [...contacts, NewNumber],
-                title: '',
-                author: '',
             }
         });
     }
